@@ -24,4 +24,20 @@ x_points = np.linspace(-1, 1)
 y_points = -(w[0]/w[1]) * x_points - b / w[1]
 
 plt.plot(x_points, y_points, c='r')
+
+plt.scatter(svc_model.support_vectors_[:, 0], svc_model.support_vectors_[
+            :, 1], s=50, facecolors='none', edgecolor='k', alpha=.5)
+
+w_hat = svc_model.coef_[0] / (np.sqrt(np.sum(svc_model.coef_[0] ** 2)))
+margin = 1/np.sqrt(np.sum(svc_model.coef_[0] ** 2))
+
+decision_boundary_ponts = np.array(list(zip(x_points, y_points)))
+points_of_line_above = decision_boundary_ponts + w_hat * margin
+points_of_line_below = decision_boundary_ponts - w_hat * margin
+
+plt.plot(points_of_line_above[:, 0],
+         points_of_line_above[:, 1], 'b--', linewidth=2)
+plt.plot(points_of_line_below[:, 0],
+         points_of_line_below[:, 1], 'g--', linewidth=2)
+
 plt.show()
