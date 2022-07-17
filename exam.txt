@@ -1,0 +1,19 @@
+Exercice 2:
+Vectors:
+A1 = 1:10 => il crée un vecteur de 10 éléments entiers en partant de 1 à 10
+A2 = 1:1:10 => Créer un vecteur de 10 entiers à partir de 1, dont les éléments s'incrémentent de 1
+A3 = 10:-1:1 => Créez un vecteur de 10 entiers, dont les éléments décrémentent de -1.
+A4 = 1:0.3:pi => Créez un vecteur commave par 1 et termine par pi, dont les éléments s'incrémentent par 0.3
+
+A4(3:5) = [1,2,3] => affecter les elements [1,2,3] au elements de vecteur A5 dans les positions 3, 4, 5 donc A1 devient A4 = 1.0000   1.3000   1.0000   2.0000   3.0000   2.5000   2.8000   3.1000
+
+A5 = linspace(1,5,5) => cree un vector de 5 elements en partant de 1 a 5
+help linspace => 'help' affiche le texte d'aide pour la fonctionnalité spécifiée après le mot clé 'help', dans ce cas il affiche le texte d'aide pour la fonction linspace
+who => 'who' affiche les variables dans l'espace de travail actuelle
+whos => whos renvoie le nombre d'octets occupés par chaque variable dans l'espace de travail
+clear |1 |2 |3 |5 =>Supprimer des éléments de l'espace de travail, libérant de la mémoire système mais tant que on a pas les variables |1 .. |5 cette fonction ne fait rien.
+who => elle va afficher A1 jusqu'a A5 car la fonction clear n'a rien supprimer.
+clc => clc efface tout le texte de la fenêtre de commande, ce qui donne un écran vide.
+
+x*y' => cette ligne va effectuer le produit de x avec le transposer du vecteur y.
+x'*y => cette ligne va effectuer le produit du vecteur transpose x avec y.
